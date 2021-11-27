@@ -45,22 +45,16 @@ public class MainActivity extends AppCompatActivity {
             drawerLayout.openDrawer(Gravity.RIGHT);
         });
 
-        // created new array list..
         recyclerDataArrayList=new ArrayList<>();
          ada=new adapter(this,recyclerDataArrayList);
-
-        // setting grid layout manager to implement grid view.
-        // in this method '2' represents number of columns to be displayed in grid view.
         GridLayoutManager layoutManager=new GridLayoutManager(this,3);
 
-        // at last set adapter to recycler view.
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(ada);
         getdata();
         initList();
-        Spinner spinner = findViewById(R.id.duration);
+        Spinner spinner = findViewById(R.id.trainer);
 
-        // we pass our item list and context to our Adapter.
         adapter = new SpinnerAdapter(this, items);
         spinner.setAdapter(adapter);
 
